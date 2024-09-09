@@ -82,7 +82,7 @@ class _MarketingWidgetState extends State<MarketingWidget> {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                              text: 'Obra',
+                              text: 'Marketing',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
