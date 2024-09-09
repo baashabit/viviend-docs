@@ -92,18 +92,6 @@ class _VentasWidgetState extends State<VentasWidget> {
                   ),
                 ),
               ),
-              Expanded(
-                child: Align(
-                  alignment: AlignmentDirectional(0.0, -1.0),
-                  child: Container(
-                    width: double.infinity,
-                    constraints: BoxConstraints(
-                      maxWidth: MediaQuery.sizeOf(context).width * 1.0,
-                    ),
-                    decoration: BoxDecoration(),
-                  ),
-                ),
-              ),
             ],
           ),
         ),
