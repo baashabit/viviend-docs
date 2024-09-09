@@ -58,7 +58,7 @@ class _ComprasWidgetState extends State<ComprasWidget> {
                 model: _model.menuModel,
                 updateCallback: () => safeSetState(() {}),
                 child: MenuWidget(
-                  area: 'ventas',
+                  area: 'compras',
                 ),
               ),
               Expanded(
@@ -82,7 +82,7 @@ class _ComprasWidgetState extends State<ComprasWidget> {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                              text: 'Ventas',
+                              text: 'Compras',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
