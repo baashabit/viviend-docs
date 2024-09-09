@@ -52,6 +52,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'Compras',
+          path: '/Compras',
+          builder: (context, params) => ComprasWidget(
+            area: params.getParam(
+              'area',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

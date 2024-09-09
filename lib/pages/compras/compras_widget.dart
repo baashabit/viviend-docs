@@ -6,11 +6,11 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'ventas_model.dart';
-export 'ventas_model.dart';
+import 'compras_model.dart';
+export 'compras_model.dart';
 
-class VentasWidget extends StatefulWidget {
-  const VentasWidget({
+class ComprasWidget extends StatefulWidget {
+  const ComprasWidget({
     super.key,
     String? area,
   }) : this.area = area ?? 'ventas';
@@ -18,18 +18,18 @@ class VentasWidget extends StatefulWidget {
   final String area;
 
   @override
-  State<VentasWidget> createState() => _VentasWidgetState();
+  State<ComprasWidget> createState() => _ComprasWidgetState();
 }
 
-class _VentasWidgetState extends State<VentasWidget> {
-  late VentasModel _model;
+class _ComprasWidgetState extends State<ComprasWidget> {
+  late ComprasModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => VentasModel());
+    _model = createModel(context, () => ComprasModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
