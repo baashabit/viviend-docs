@@ -61,34 +61,50 @@ class _VentasWidgetState extends State<VentasWidget> {
                   area: 'ventas',
                 ),
               ),
-              Container(
-                width: MediaQuery.sizeOf(context).width * 1.0,
-                height: MediaQuery.sizeOf(context).height * 1.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                ),
-                child: RichText(
-                  textScaler: MediaQuery.of(context).textScaler,
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Documentación',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: FlutterFlowTheme.of(context).primary,
-                              letterSpacing: 0.0,
-                              fontWeight: FontWeight.bold,
-                            ),
+              Expanded(
+                child: Align(
+                  alignment: AlignmentDirectional(0.0, -1.0),
+                  child: Container(
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    height: MediaQuery.sizeOf(context).height * 1.0,
+                    constraints: BoxConstraints(
+                      maxWidth: MediaQuery.sizeOf(context).width * 1.0,
+                    ),
+                    decoration: BoxDecoration(),
+                    child: Container(
+                      width: 100.0,
+                      height: 100.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
                       ),
-                      TextSpan(
-                        text: ' - Ventas',
-                        style: TextStyle(),
-                      )
-                    ],
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Readex Pro',
-                          letterSpacing: 0.0,
+                      child: RichText(
+                        textScaler: MediaQuery.of(context).textScaler,
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'FlutterFlow',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
+                            TextSpan(
+                              text: ' - Build Different',
+                              style: TextStyle(),
+                            )
+                          ],
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Readex Pro',
+                                    letterSpacing: 0.0,
+                                  ),
                         ),
+                      ),
+                    ),
                   ),
                 ),
               ),
