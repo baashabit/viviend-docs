@@ -72,6 +72,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'Marketing',
+          path: '/marketing',
+          builder: (context, params) => MarketingWidget(
+            area: params.getParam(
+              'area',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
