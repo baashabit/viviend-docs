@@ -55,7 +55,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         ),
         FFRoute(
           name: 'Compras',
-          path: '/Compras',
+          path: '/compras',
           builder: (context, params) => ComprasWidget(
             area: params.getParam(
               'area',
