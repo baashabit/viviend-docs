@@ -62,6 +62,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ParamType.String,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'Obra',
+          path: '/obra',
+          builder: (context, params) => ObraWidget(
+            area: params.getParam(
+              'area',
+              ParamType.String,
+            ),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
